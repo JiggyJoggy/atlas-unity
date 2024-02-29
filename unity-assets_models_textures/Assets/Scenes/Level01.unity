@@ -2131,6 +2131,11 @@ MonoBehaviour:
   speed: 9
   rotationSpeed: 0
   jumpSpeed: 5
+--- !u!4 &559820383 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 169696757147995304, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+  m_PrefabInstance: {fileID: 470219427627507966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!143 &559820384
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2805,11 +2810,11 @@ Transform:
   m_GameObject: {fileID: 755433263}
   serializedVersion: 2
   m_LocalRotation: {x: 0.078459114, y: -0, z: -0, w: 0.99691737}
-  m_LocalPosition: {x: 0, y: 2.5, z: -6.25}
+  m_LocalPosition: {x: 0, y: 1.25, z: -6.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 559820383}
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
 --- !u!114 &755433267
 MonoBehaviour:
@@ -6934,7 +6939,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 169696757147995304, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 755433266}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 287776323753874507, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
       insertIndex: -1
@@ -7047,7 +7055,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 755433266}
   - {fileID: 720040847}
   - {fileID: 470219427627507966}
   - {fileID: 778374225}
