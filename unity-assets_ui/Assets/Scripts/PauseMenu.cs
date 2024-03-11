@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
@@ -28,5 +29,22 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Timer.instance.StartStopwatch();
+    }
+
+    public void Restart()
+    {
+        SceneTracker.lastScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(SceneTracker.lastScene);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Options()
+    {
+        SceneTracker.lastScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene("Options");
     }
 }
