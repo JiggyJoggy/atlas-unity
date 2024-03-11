@@ -224,6 +224,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2561521231413300227, guid: 664649f0f8e4fc84aa0a38ba45259dc3, type: 3}
   m_PrefabInstance: {fileID: 5183112121216206817}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &72253724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5510296804364894693, guid: fb12749126b677148b8a70727fb5b579, type: 3}
+  m_PrefabInstance: {fileID: 5696418112247435768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &117128834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -929,6 +934,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5902708430093505792, guid: 5e9463552046ebd428d8e60bc8dd9ebe, type: 3}
+--- !u!1 &308178238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 166387991976486652, guid: 28e9fce6432453b489754747962eb71c, type: 3}
+  m_PrefabInstance: {fileID: 8084172616338470369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &309550039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5178,7 +5188,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerText: {fileID: 1299222307}
+  DupText: {fileID: 1576056473}
   triggerScript: {fileID: 559820388}
+  WinScreen: {fileID: 72253724}
+  TimerScreen: {fileID: 308178238}
+--- !u!114 &1576056473 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4600252338576860555, guid: fb12749126b677148b8a70727fb5b579, type: 3}
+  m_PrefabInstance: {fileID: 5696418112247435768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1612034487
 PrefabInstance:
   m_ObjectHideFlags: 0

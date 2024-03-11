@@ -18,11 +18,21 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             Timer.instance.StopStopwatch();
+            CameraController camScript = FindAnyObjectByType<CameraController>();
+            camScript.enabled = false;
+
+            PlayerController playerScript = FindAnyObjectByType<PlayerController>();
+            playerScript.enabled = false;
         }
         else if (pauseMenu.activeSelf == true && Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(false);
             Timer.instance.StartStopwatch();
+            CameraController camScript = FindAnyObjectByType<CameraController>();
+            camScript.enabled = true;
+
+            PlayerController playerScript = FindAnyObjectByType<PlayerController>();
+            playerScript.enabled = true;
         }
     }
     public void Resume()

@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3546712744080324359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3498705492371192467}
+        m_TargetAssemblyTypeName: WinMenu, Assembly-CSharp
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1690814003917278201
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +537,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2064531989510901807}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3498705492371192467}
+        m_TargetAssemblyTypeName: WinMenu, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4206764599551806582
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,13 +638,14 @@ GameObject:
   - component: {fileID: 9037298328860566611}
   - component: {fileID: 2314593416302214459}
   - component: {fileID: 4616686544524259870}
+  - component: {fileID: 3498705492371192467}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1007732166510509190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -708,6 +733,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3498705492371192467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5510296804364894693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77aa727f5325e07458a5666ee8dede7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6917631939295483676
 GameObject:
   m_ObjectHideFlags: 0

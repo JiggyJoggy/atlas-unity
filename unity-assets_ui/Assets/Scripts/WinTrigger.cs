@@ -2,23 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class WinTrigger : MonoBehaviour
 {
     public Text TimerText;
+    public TMP_Text DupText;
     public MonoBehaviour triggerScript;
+    public GameObject WinScreen;
+    public GameObject TimerScreen;
     private void OnTriggerExit(Collider other)
     {
         if (IsPlayerObject(other.gameObject))
         {
-            triggerScript.enabled = false;
-            TimerText.color = Color.green;
-            TimerText.fontSize = 60;
+            Win();
         }
     }
 
     private bool IsPlayerObject(GameObject obj)
     {
         return obj.GetComponent<PlayerController>() != null;
+    }
+
+    public void Win()
+    {
+        Timer.instance.StopStopwatch();
+        DupText.SetText(TimerText.text);
+        TimerScreen.SetActive(false);
+        WinScreen.SetActive(true);
     }
 }
