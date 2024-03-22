@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5185668974944839899, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
   m_PrefabInstance: {fileID: 470219427627507966}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2098297810}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 916336329a8f175499f9a834a90032ee, type: 3}
@@ -2140,7 +2140,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4060204840683702833, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
   m_PrefabInstance: {fileID: 470219427627507966}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2098297810}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5815dc0abc14e8f41889f078c3f4f449, type: 3}
@@ -3474,6 +3474,11 @@ MeshCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54b48be2b43133e42a08cec2a89ab8b8, type: 3}
   m_PrefabInstance: {fileID: 1020085874}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1063385548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1359235337120564454, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+  m_PrefabInstance: {fileID: 470219427627507966}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1096347797 stripped
 GameObject:
@@ -4902,6 +4907,7 @@ GameObject:
   - component: {fileID: 1505175783}
   - component: {fileID: 1505175782}
   - component: {fileID: 1505175781}
+  - component: {fileID: 1505175785}
   m_Layer: 0
   m_Name: CutsceneCamera
   m_TagString: Untagged
@@ -5004,6 +5010,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -10, y: 0, z: 0}
+--- !u!114 &1505175785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505175780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9beefe0a9aa13bd478dd14ac3a2276ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: {fileID: 308178238}
+  MainCam: {fileID: 1063385548}
+  Player: {fileID: 2098297810}
 --- !u!1 &1507307654 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c864aebd7dd37a04393b24e626c6fd3d, type: 3}
@@ -6689,6 +6710,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 605121178}
   m_SourcePrefab: {fileID: 100100000, guid: 620d727c20165ec47bd1604253b1ed8e, type: 3}
+--- !u!1 &2098297810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 287776323753874507, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+  m_PrefabInstance: {fileID: 470219427627507966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2109634481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6993,6 +7019,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2662851122778465629, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4060204840683702833, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
       propertyPath: pauseMenu
       value: 
@@ -7025,6 +7055,10 @@ PrefabInstance:
     - target: {fileID: 2561521231413300227, guid: 664649f0f8e4fc84aa0a38ba45259dc3, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561521231413300227, guid: 664649f0f8e4fc84aa0a38ba45259dc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3185594706490782729, guid: 664649f0f8e4fc84aa0a38ba45259dc3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7227,6 +7261,10 @@ PrefabInstance:
     - target: {fileID: 166387991976486652, guid: 28e9fce6432453b489754747962eb71c, type: 3}
       propertyPath: m_Name
       value: TimerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 166387991976486652, guid: 28e9fce6432453b489754747962eb71c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3630349665304942617, guid: 28e9fce6432453b489754747962eb71c, type: 3}
       propertyPath: m_Pivot.x
