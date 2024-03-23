@@ -56,15 +56,6 @@ public class PlayerController : MonoBehaviour
         velocity.y = ySpeed;
 
         characterController.Move(velocity * Time.deltaTime);
-
-        if (movementDirection != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-        }
-        characterController.Move(velocity * Time.deltaTime);
-
         if (movementDirection != Vector3.zero)
         {
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);

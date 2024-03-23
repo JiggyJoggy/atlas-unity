@@ -19,8 +19,27 @@ public class CameraController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Mouse X");
 
-        transform.RotateAround(player.transform.position, Vector3.up, horizontalInput * camRotateSpeed);
+        //if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
+        //{
+            transform.RotateAround(player.transform.position, Vector3.up, horizontalInput * camRotateSpeed);
+            transform.LookAt(player.transform.position);
+       // }
 
-        transform.LookAt(player.transform.position);
+        //if (Input.GetKey(KeyCode.A))
+       // {
+       //     player.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+       // }
+       // if (Input.GetKey(KeyCode.D))
+       // {
+       //     player.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+       // }
+       // if (Input.GetKey(KeyCode.W))
+       // {
+       //     player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+       // }
+       // if (Input.GetKey(KeyCode.S))
+        //{
+        //    player.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+       // }
     }
 }

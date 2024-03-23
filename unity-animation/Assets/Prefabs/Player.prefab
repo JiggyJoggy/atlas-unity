@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 287776323753874507}
   startPos: {x: 0, y: 50, z: 0}
-  speed: 9
+  speed: 20
   rotationSpeed: 0
   jumpSpeed: 5
 --- !u!143 &1563724909845328137
