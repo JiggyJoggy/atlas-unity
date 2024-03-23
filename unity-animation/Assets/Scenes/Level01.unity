@@ -2568,6 +2568,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40eaf9c26666ef94395fb9975e3e6b03, type: 3}
   m_PrefabInstance: {fileID: 711445347}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &715588936 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7847127141198384388, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+  m_PrefabInstance: {fileID: 1735043309540814543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &720040845
 GameObject:
   m_ObjectHideFlags: 0
@@ -7015,6 +7020,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2662851122778465629, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+      propertyPath: tyAnimator
+      value: 
+      objectReference: {fileID: 715588936}
+    - target: {fileID: 2662851122778465629, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+      propertyPath: rotationSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4060204840683702833, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
       propertyPath: pauseMenu
       value: 
@@ -7027,6 +7040,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a429d00a2219f6142a000302a9d81e16, type: 2}
+    - target: {fileID: 7847127141198384388, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847127141198384388, guid: 28b71b3a54ef2fd44a9548fcdbcf3a09, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

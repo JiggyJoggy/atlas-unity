@@ -13,12 +13,14 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private float ySpeed;
     private float originalStepOffset;
+    public Animator tyAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;
+        tyAnimator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -45,7 +47,13 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 ySpeed = jumpSpeed;
+                tyAnimator.SetBool("IsJump", true);
             }
+            else
+            {
+                tyAnimator.SetBool("IsJump", false);
+            }
+            tyAnimator.SetBool("IsFalling", false);
         }
         else
         {
@@ -54,6 +62,15 @@ public class PlayerController : MonoBehaviour
 
         Vector3 velocity = movementDirection * magnitude;
         velocity.y = ySpeed;
+
+        if (characterController.velocity.x != 0)
+        {
+            tyAnimator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            tyAnimator.SetBool("IsRunning", false);
+        }
 
         characterController.Move(velocity * Time.deltaTime);
         if (movementDirection != Vector3.zero)
