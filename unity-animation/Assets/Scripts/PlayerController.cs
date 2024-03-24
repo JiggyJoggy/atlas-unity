@@ -78,9 +78,14 @@ public class PlayerController : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
+
+        if (player.transform.position.y < -5f)
+        {
+            tyAnimator.SetBool("IsFalling", true);
+        }
         if (player.transform.position.y < -50f)
         {
             player.transform.position = startPos;
         }
-    }    
+    }
 }
