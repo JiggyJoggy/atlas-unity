@@ -12,12 +12,12 @@ public class WinTrigger : MonoBehaviour
     public GameObject WinScreen;
     public GameObject TimerScreen;
     public AudioSource BGMusic;
+    public AudioSource VictoryMusic;
     private void OnTriggerExit(Collider other)
     {
         if (IsPlayerObject(other.gameObject))
         {
             Win();
-            BGMusic.enabled = false;
         }
     }
 
@@ -28,6 +28,8 @@ public class WinTrigger : MonoBehaviour
 
     public void Win()
     {
+        BGMusic.enabled = false;
+        VictoryMusic.enabled = true;
         Timer.instance.StopStopwatch();
         DupText.SetText(TimerText.text);
         TimerScreen.SetActive(false);
