@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+
+    public AudioMixerSnapshot defaultAudio;
+    public AudioMixerSnapshot muffledAudio;
 
     void Update()
     {
@@ -17,6 +21,7 @@ public class PauseMenu : MonoBehaviour
         if (pauseMenu.activeSelf == false && Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(true);
+            muffledAudio.TransitionTo(0f);
             Timer.instance.StopStopwatch();
             CameraController camScript = FindAnyObjectByType<CameraController>();
             camScript.enabled = false;
@@ -27,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         else if (pauseMenu.activeSelf == true && Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(false);
+            defaultAudio.TransitionTo(1f);
             Timer.instance.StartStopwatch();
             CameraController camScript = FindAnyObjectByType<CameraController>();
             camScript.enabled = true;
@@ -38,6 +44,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        defaultAudio.TransitionTo(1f);
         Timer.instance.StartStopwatch();
     }
 
