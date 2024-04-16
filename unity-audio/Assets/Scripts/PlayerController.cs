@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private float ySpeed;
     private float originalStepOffset;
     public Animator tyAnimator;
+    public AudioSource grassAudio;
+    public AudioSource stoneAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +84,43 @@ public class PlayerController : MonoBehaviour
         {
             player.transform.position = startPos;
         }
+    }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Grass") && characterController.velocity.x != 0)
+        {
+            Debug.Log("Touching grass ya");
+            grassAudio.enabled = true;
+        }
+        else
+        {
+            grassAudio.enabled = false;
+        }
+        
+        if (other.CompareTag("Stone") && characterController.velocity.x != 0)
+        {
+            Debug.Log("Touching stone wo");
+            stoneAudio.enabled = true;
+        }
+        else
+        {
+            stoneAudio.enabled = false;
+        }
+    }
+
+    void OnTriggerEnter(Collider other) // TODO: FIX THIS BECAUSE TIMING IS NOT RIGHT NOR WORKING
+    {
+        if (other.CompareTag("Grass") && tyAnimator.GetBool("IsFalling") == true)
+        {
+            Debug.Log("YOU FELL LOL GG");
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Not touching anything");
+        grassAudio.enabled = false;
+        stoneAudio.enabled = false;
     }
 
     private void LateUpdate()

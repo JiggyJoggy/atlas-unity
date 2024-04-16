@@ -11,11 +11,13 @@ public class WinTrigger : MonoBehaviour
     public MonoBehaviour triggerScript;
     public GameObject WinScreen;
     public GameObject TimerScreen;
+    public AudioSource BGMusic;
     private void OnTriggerExit(Collider other)
     {
         if (IsPlayerObject(other.gameObject))
         {
             Win();
+            BGMusic.enabled = false;
         }
     }
 
