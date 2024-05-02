@@ -1108,7 +1108,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 5
-  far clip plane: 1000000
+  far clip plane: 50000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -1151,8 +1151,8 @@ MonoBehaviour:
   m_Script: {fileID: -1826476478, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mWorldCenterMode: 1
-  mWorldCenter: {fileID: 0}
+  mWorldCenterMode: 2
+  mWorldCenter: {fileID: 1580334383}
 --- !u!81 &1549278802
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -1236,10 +1236,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1580334385}
+        m_TargetAssemblyTypeName: ARButtons, Assembly-CSharp
+        m_MethodName: FoundImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1580334385}
+        m_TargetAssemblyTypeName: ARButtons, Assembly-CSharp
+        m_MethodName: LostImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1580334383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,6 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0fe2d1a09cfc44ba1768999ec2ff65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ARCanvas: {fileID: 793665019}
 --- !u!114 &1580334386
 MonoBehaviour:
   m_ObjectHideFlags: 0
