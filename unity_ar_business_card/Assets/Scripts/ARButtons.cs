@@ -6,6 +6,7 @@ public class ARButtons : MonoBehaviour
 {
 
     public Canvas ARCanvas;
+    public Animator OpenAnimation;
 
     public void GitHubURL()
     {
@@ -29,11 +30,13 @@ public class ARButtons : MonoBehaviour
 
     public void LostImage()
     {
+        OpenAnimation.SetBool("ImageAnime", false);
         ARCanvas.enabled = false;
     }
 
     public void FoundImage()
     {
+        OpenAnimation.SetBool("ImageAnime", true);
         ARCanvas.enabled = true;
     }
 }

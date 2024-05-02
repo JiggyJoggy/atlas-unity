@@ -1374,6 +1374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ARCanvas: {fileID: 793665019}
+  ARTitle: {fileID: 0}
+  OpenAnimation: {fileID: 793665020}
 --- !u!114 &1580334386
 MonoBehaviour:
   m_ObjectHideFlags: 0
